@@ -26,7 +26,7 @@ This is an *Episodic* task which solves the environment attaining the maximum av
 
 If you would like to run this project in your local machine do the step as mentioned below :
 
-*Step 1 *: Clone the repo (coz Python modules for running the unity agents is not present in my repo)
+*Step 1*: Clone the repo (coz Python modules for running the unity agents is not present in my repo)
 
 git clone https://github.com/udacity/deep-reinforcement-learning.git
 cd deep-reinforcement-learning/python
@@ -55,4 +55,4 @@ Report.md |  Description abt project implementation
 
 All the files gets imported in the notebook files in which ddpg_Agent acts as backend holding Buffered_memory and OUInoise class for the project 
 
-*Step 3 *: Running all the cells in the notebook will start training the model 
+*Step 3*: Running all the cells in the notebook will start training the model 
