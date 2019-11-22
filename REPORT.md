@@ -11,10 +11,10 @@ The Q-Network is much like Actor-Critic Methods whereas in DDPG  the Actor direc
 <img src = "/algo.png" width="75%" align="center" alt="robotic_arms" title="Robotic Arms"/>
 
 ### Key Points:
--Experience replay
--Actor & Critic network updates
--Target network updates
--Exploration
+* Experience replay
+* Actor & Critic network updates
+* Target network updates
+* Exploration
 
 The building block of DDPG algorithm is Agent Class. It holds act ,learn , step and soft_update methods . Act method generates a entries for the corrosponding actions with help of Actor Model.
 Noise to be added to the actions to allow the explore the possiblities in the action space. The noise is always generated with the help of Ornstein-Uhlenbeck Process.
@@ -22,6 +22,17 @@ Learn method does update the models with respectives to the learning samples in 
 
 
 ### Network Architecture:
+
+* Actor 
+  * Hidden_Layer1 = input,400 -> ReLu activation 
+  * Hidden_Layer2 = 400,300 -> ReLu activation 
+  * Output layer  = 300,4(action_size) --> TanH activation 
+  
+* Critic
+  * Hidden_Layer1 = input,400 -> ReLu activation 
+  * Hidden_Layer2 = 400+action_size,300 -> ReLu activation 
+  * Output layer  = 300,1 --> Linear
+
 
 Hyperparameters      | Fine Value
 -------------------  | -------------
@@ -48,7 +59,7 @@ After training the model attaining the score of 30.0 , by proving it as episodic
 Once it gets finished it will throw out 
 ```Environment solved in 9 episodes!	Moving Average =30.3 over last 100 episodes```
 
- <img src = "/finish.jpg" width="75%" align="center" alt="robotic_arms" title="SOLVED"/>
+ <img src = "/finish.png" width="75%" align="center" alt="robotic_arms" title="SOLVED"/>
 
 ### Ideas for future work :
 
